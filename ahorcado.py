@@ -1,7 +1,7 @@
 guesses = ''
-palabra = 'computadora'
-vidas = 0
-while vidas < 15:
+palabra = str(input('Di la palabra: '))
+vidas = 15
+while vidas > 0:
 
     fail = 0
     for caracter in palabra:
@@ -11,12 +11,12 @@ while vidas < 15:
             print('_')
             fail += 1
     if fail == 0:
-        print('has ganado')
+        print('¡Has ganado!')
         break
-    guess = input('di la letra')
+    guess = input('Di la letra: ')
     guesses += guess
     if guess not in palabra:
         vidas -= 1
-        print('error')
+        print('Error. Te quedan %s vidas' % vidas)
         if vidas == 0:
             print('GAME OVER   xDxDxD...')

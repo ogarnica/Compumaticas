@@ -1,7 +1,7 @@
 import turtle
 
 t = turtle.Pen()
-turtle.setup(1000, 800)
+turtle.setup(1000, 700)
 t.pensize(3)
 t.pencolor('red')
 

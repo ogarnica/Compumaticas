@@ -1,7 +1,7 @@
-def abcde(txt, d):
+def cifra(txt, d):
     abc = 'abcdefghijklmnopqrstuvwxyz'
     lab = len(abc)
-    dcc = {abc(i): abc[(i+d) % lab]for i in range(lab)}
+    dcc = {abc[i]: abc[(i+d) % lab]for i in range(lab)}
     out = ''
     for c in txt:
         if c in abc:
@@ -11,9 +11,14 @@ def abcde(txt, d):
         out += new
     return out
 while True:
-    tex = input('Introduce el texto q quiras saber en CESAR:')
-    des = int(input('Introduce el desplazamiento:'))
-    siono = input('¿Quieres seguir jugando?S/N:')
+    tex = input('Introduce el texto que quiras saber en CESAR: ')
+    des = int(input('Introduce el desplazamiento: '))
+    des = int(des)
+    print('\nCalculando...')
+    print('OK!\n')
+    print('ENTRADA:\n' + tex + '\n')
+    print('SALIDA:\n' + cifra(tex, des) + '\n')
+    siono = input('¿Quieres seguir jugando?S/N: ')
     if siono == 'S':
         continue
     else:

@@ -6,7 +6,7 @@ altosss = altura
 a = 1
 aa = altura-3
 dolar = ' $'
-euro = ' â‚¬'
+euro = ' €'
 
 for x in range(1, 3):
    espacios = alto - 1

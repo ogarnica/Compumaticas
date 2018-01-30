@@ -2,8 +2,8 @@ from random import randint
 import turtle as t
 
 circles = 20
-t.speed(0)
 size = 20
+t.speed(0)
 t.colormode(255)
 def move(length, angle):
     t.right(angle)
@@ -11,12 +11,26 @@ def move(length, angle):
 
 def hex():
     t.pendown()
-    t.color(randint(0, 255), randint(0, 255), randint(0, 255))
+    a = randint(0, 255), randint(0, 255), randint(0, 255)
+    t.color(a)
     t.begin_fill()
-    for i in range(6):
+    for i in range(7):
         move(size,-60)
     t.end_fill()
+    t.color(1, 1, 1)
+    t.lt(120)
+    t.fd(size)
+    t.rt(60)
+    t.fd(size)
+    t.bk(size)
+    t.lt(120)
+    t.fd(size)
+    t.lt(120)
+    t.color(a)
+    t.fd(size)
+    t.end_fill()
     t.penup()
+
 
 t.penup()
 for circle in range(circles):
